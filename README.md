@@ -1,6 +1,8 @@
 # BadgedImageview
 BadgedImageview allow you show a badge into a Imageview. I just extracted the widgets from Plaid app developed by Nick Butcher(https://github.com/nickbutcher) and add some adjustments, all credits for Nick.
 
+# minSdkVersion 15
+
 # API java and xml
 - set badge color
 - set badge padding
