@@ -8,7 +8,22 @@ BadgedImageview allow you show a badge into a Imageview. I just extracted the wi
 - set badge gravity
 - set foreground
 - show and hide the badge programmatically
-#demo
+
+**Gradle via jitpack**
+
+```groovy
+ repositories {
+        // ...
+        maven { url "https://jitpack.io" }
+ }
+```
+```groovy
+ dependencies {
+	        compile 'com.github.yesidlazaro:BadgedImageview:1.0'
+	}
+```
+
+# Demo
 ![Alt text](https://github.com/yesidlazaro/BadgedImageview/blob/master/art/demo.png)
 # example
 ```java
