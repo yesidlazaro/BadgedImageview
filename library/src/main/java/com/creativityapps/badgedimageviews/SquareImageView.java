@@ -22,7 +22,7 @@ import android.util.AttributeSet;
 /**
  * A extension of ForegroundImageView that is always 1:1 aspect ratio.
  */
-public class SquareImageView extends ForegroundImageView {
+  class SquareImageView extends ForegroundImageView {
 
     public SquareImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
