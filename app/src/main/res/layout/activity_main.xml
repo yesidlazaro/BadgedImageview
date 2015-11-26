@@ -46,6 +46,18 @@
             app:badgeGravity="top|left"
             app:badgePadding="@dimen/padding_normal"
             app:badgeText="@string/lab_gif" />
+
+        <com.creativityapps.badgedimageviews.BadgedImageView
+            android:id="@+id/badge_person_full_width"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="@dimen/padding_normal"
+            android:foreground="?selectableItemBackground"
+            android:src="@drawable/me"
+            android:scaleType="centerCrop"
+            app:badgeGravity="top|left"
+            app:badgePadding="@dimen/padding_normal"
+            app:badgeText="@string/lab_full_width" />
     </LinearLayout>
 
 </ScrollView>
