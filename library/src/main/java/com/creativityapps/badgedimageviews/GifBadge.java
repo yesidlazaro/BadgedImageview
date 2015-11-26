@@ -8,6 +8,7 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
+import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -53,8 +54,7 @@ class GifBadge extends Drawable {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 canvas.drawRoundRect(0, 0, width, height, cornerRadius, cornerRadius, backgroundPaint);
             } else {
-                // TODO: 11/21/15 support cornerRadius for api < 21
-                canvas.drawRect(0, 0, width, height, backgroundPaint);
+                canvas.drawRoundRect(new RectF(0, 0, width, height), cornerRadius, cornerRadius, backgroundPaint);
             }
             // punch out the word ,leaving transparency
             textPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.CLEAR));
