@@ -39,7 +39,7 @@
         <com.creativityapps.badgedimageviews.BadgedSquareImageView
             android:id="@+id/badge_person_gif"
             android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/padding_normal"
             android:foreground="?selectableItemBackground"
             android:src="@drawable/me"
@@ -53,8 +53,8 @@
             android:layout_height="200dp"
             android:layout_marginTop="@dimen/padding_normal"
             android:foreground="?selectableItemBackground"
-            android:src="@drawable/me"
             android:scaleType="centerCrop"
+            android:src="@drawable/me"
             app:badgeGravity="top|left"
             app:badgePadding="@dimen/padding_normal"
             app:badgeText="@string/lab_full_width" />

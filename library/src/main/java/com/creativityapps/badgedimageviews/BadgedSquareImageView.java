@@ -19,7 +19,6 @@ package com.creativityapps.badgedimageviews;
 import android.content.Context;
 import android.util.AttributeSet;
 
-
 /**
  * A view group that draws a badge drawable on top of it's contents.
  */
@@ -29,7 +28,9 @@ public class BadgedSquareImageView extends BadgedImageView {
     }
 
     @Override
-    protected void onMeasure(int widthSpec, int heightSpec) {
+    protected void onMeasure(int widthSpec, int  heightSpec) {
         super.onMeasure(widthSpec, heightSpec);
+        int fixedSize = Math.min(getMeasuredWidth(), getMeasuredHeight());
+        setMeasuredDimension(fixedSize, fixedSize);
     }
 }
