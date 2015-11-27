@@ -29,7 +29,7 @@ import android.widget.ImageView;
 /**
  * An extension to {@link ImageView} which has a foreground drawable.
  */
-public class ForegroundImageView extends ImageView {
+class ForegroundImageView extends ImageView {
 
     private Drawable foreground;
 
@@ -43,7 +43,7 @@ public class ForegroundImageView extends ImageView {
             setForeground(d);
         }
         a.recycle();
-        if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             setOutlineProvider(ViewOutlineProvider.BOUNDS);
     }
 
@@ -129,7 +129,7 @@ public class ForegroundImageView extends ImageView {
     public void drawableHotspotChanged(float x, float y) {
         super.drawableHotspotChanged(x, y);
         if (foreground != null) {
-            if(Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
                 foreground.setHotspot(x, y);
         }
     }
