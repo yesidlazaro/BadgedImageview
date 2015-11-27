@@ -16,9 +16,9 @@ import android.text.TextPaint;
 import android.util.DisplayMetrics;
 
 /**
- * A drawable for indicating that an image is animated
+ * A drawable for put into the Imageview
  */
-class GifBadge extends Drawable {
+class BadgeDrawable extends Drawable {
     private static final int TEXT_SIZE = 12;    // sp
     private static final int PADDING = 4;       // dp
     private static final int CORNER_RADIUS = 2; // dp
@@ -30,7 +30,7 @@ class GifBadge extends Drawable {
     private int width;
     private int height;
 
-    GifBadge(Context context, String badgeText, int badgeColor) {
+    BadgeDrawable(Context context, String badgeText, int badgeColor) {
         if (bitmap == null) {
             text = badgeText;
             final DisplayMetrics dm = context.getResources().getDisplayMetrics();

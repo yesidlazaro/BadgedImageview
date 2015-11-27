@@ -28,7 +28,7 @@ public class BadgedImageView extends ForegroundImageView {
         badgePadding = a.getDimensionPixelSize(R.styleable.BadgedImageView_badgePadding, 0);
         badgeText = a.getString(R.styleable.BadgedImageView_badgeText);
         badgeColor = a.getColor(R.styleable.BadgedImageView_badgeColor, Color.WHITE);
-        badge = new GifBadge(context, badgeText, badgeColor);
+        badge = new BadgeDrawable(context, badgeText, badgeColor);
 
         a.recycle();
     }
@@ -44,7 +44,7 @@ public class BadgedImageView extends ForegroundImageView {
 
     public void setBadgeText(String newText) {
         this.badgeText = newText;
-        badge = new GifBadge(getContext(), badgeText, badgeColor);
+        badge = new BadgeDrawable(getContext(), badgeText, badgeColor);
         invalidate();
     }
 
