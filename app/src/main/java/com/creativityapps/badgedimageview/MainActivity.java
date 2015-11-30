@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         badgedImageViewPersonFullWidth = (BadgedImageView) findViewById(R.id.badge_person_full_width);
 
         badgedImageViewDog.showBadge(true);
+        badgedImageViewDog.setBadgeText(getString(R.string.lab_gif));
 
         badgedImageViewPersonVideo.showBadge(true);
 

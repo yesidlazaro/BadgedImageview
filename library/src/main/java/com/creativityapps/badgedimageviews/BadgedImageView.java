@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -60,12 +59,16 @@ public class BadgedImageView extends ForegroundImageView {
 
     public void setBadgeColor(@ColorInt int color) {
         badgeColor = color;
-        badge.setColorFilter(badgeColor, PorterDuff.Mode.SRC_IN);
+        updateBadge(getContext());
     }
 
     public void setBadgeText(String newText) {
         this.badgeText = newText;
-        badge = new BadgeDrawable(getContext(), badgeText, badgeColor);
+        updateBadge(getContext());
+    }
+
+    private void updateBadge(Context context) {
+        badge = new BadgeDrawable(context, badgeText, badgeColor);
         invalidate();
     }
 

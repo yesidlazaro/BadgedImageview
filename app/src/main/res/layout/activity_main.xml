@@ -22,8 +22,7 @@
             android:layout_height="200dp"
             android:src="@drawable/dog"
             app:badgeGravity="end|bottom"
-            app:badgePadding="@dimen/padding_normal"
-            app:badgeText="@string/lab_gif" />
+            app:badgePadding="@dimen/padding_normal" />
 
         <com.creativityapps.badgedimageviews.BadgedSquareImageView
             android:id="@+id/badge_person_video"
