@@ -16,6 +16,7 @@
 
 package com.creativityapps.badgedimageviews;
 
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -30,18 +31,35 @@ import android.widget.ImageView;
  * An extension to {@link ImageView} which has a foreground drawable.
  */
 class ForegroundImageView extends ImageView {
-
     private Drawable foreground;
 
-    public ForegroundImageView(Context context, AttributeSet attrs) {
-        super(context, attrs);
+    public ForegroundImageView(Context context) {
+        this(context, null);
+    }
 
+    public ForegroundImageView(Context context, AttributeSet attrs) {
+        this(context, attrs, 0);
+    }
+
+    public ForegroundImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init(context, attrs);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public ForegroundImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+        init(context, attrs);
+    }
+
+    private void init(Context context, AttributeSet attrs) {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.ForegroundView);
 
         final Drawable d = a.getDrawable(R.styleable.ForegroundView_android_foreground);
         if (d != null) {
             setForeground(d);
         }
+
         a.recycle();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
             setOutlineProvider(ViewOutlineProvider.BOUNDS);
