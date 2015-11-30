@@ -25,7 +25,7 @@ class BadgeDrawable extends Drawable {
     private static final String TYPEFACE = "sans-serif-black";
     private static final int TYPEFACE_STYLE = Typeface.NORMAL;
     private final Paint paint;
-    public String text;
+    private String text;
     private Bitmap bitmap;
     private int width;
     private int height;

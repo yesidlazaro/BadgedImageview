@@ -9,10 +9,10 @@ import com.creativityapps.badgedimageviews.BadgedImageView;
 import com.creativityapps.badgedimageviews.BadgedSquareImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    BadgedFourThreeImageView badgedImageViewDog;
-    BadgedSquareImageView badgedImageViewPersonVideo;
-    BadgedSquareImageView badgedImageViewPersonGif;
-    BadgedImageView badgedImageViewPersonFullWidth;
+    private BadgedFourThreeImageView badgedImageViewDog;
+    private BadgedSquareImageView badgedImageViewPersonVideo;
+    private BadgedSquareImageView badgedImageViewPersonGif;
+    private BadgedImageView badgedImageViewPersonFullWidth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
