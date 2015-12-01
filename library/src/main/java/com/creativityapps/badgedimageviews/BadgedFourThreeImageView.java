@@ -16,16 +16,30 @@
 
 package com.creativityapps.badgedimageviews;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
-
 
 /**
  * A view group that draws a badge drawable on top of it's contents.
  */
 public class BadgedFourThreeImageView extends BadgedImageView {
+    public BadgedFourThreeImageView(Context context) {
+        super(context);
+    }
+
     public BadgedFourThreeImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
+    }
+
+    public BadgedFourThreeImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public BadgedFourThreeImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
     }
 
     @Override

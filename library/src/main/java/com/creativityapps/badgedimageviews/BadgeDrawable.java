@@ -25,13 +25,13 @@ class BadgeDrawable extends Drawable {
     private static final String TYPEFACE = "sans-serif-black";
     private static final int TYPEFACE_STYLE = Typeface.NORMAL;
     private final Paint paint;
-    public String text;
+    private String text;
     private Bitmap bitmap;
     private int width;
     private int height;
 
     BadgeDrawable(Context context, String badgeText, int badgeColor) {
-        if (bitmap == null) {
+        if (bitmap == null && badgeText != null) {
             text = badgeText;
             final DisplayMetrics dm = context.getResources().getDisplayMetrics();
             final float density = dm.density;
@@ -65,7 +65,9 @@ class BadgeDrawable extends Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        canvas.drawBitmap(bitmap, getBounds().left, getBounds().top, paint);
+        if (bitmap != null) {
+            canvas.drawBitmap(bitmap, getBounds().left, getBounds().top, paint);
+        }
     }
 
     @Override

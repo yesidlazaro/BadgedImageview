@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BadgedImageview.iml" filepath="$PROJECT_DIR$/BadgedImageview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BadgedImageview-github.iml" filepath="$PROJECT_DIR$/BadgedImageview-github.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
