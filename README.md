@@ -19,7 +19,7 @@ BadgedImageview allow you show a badge into a Imageview. I just extracted the wi
 ```
 ```groovy
  dependencies {
-	        compile 'com.github.yesidlazaro:BadgedImageview:1.0.1'
+	        compile 'com.github.yesidlazaro:BadgedImageview:1.0.2'
 	}
 ```
 
